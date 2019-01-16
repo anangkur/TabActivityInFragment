@@ -1,0 +1,67 @@
+<template format="4"
+        revision="1"
+        name="Tab Layout in Fragment Activity"
+        description="Creates a new Tab activity within fragment classes">
+
+    <category value="Other"/>
+
+    <parameter
+        id="mainActivityName"
+        name="Activity Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        suggest="${layoutToActivity(mainLayout)}"
+        default="MainActivity"
+        help="The name of the activity class to create" />
+
+    <parameter
+        id="mainLayout"
+        name="Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        suggest="${activityToLayout(mainActivityName)}"
+        default="activity_main"
+        help="The name of the layout to create for the activity" />
+
+    <parameter
+        id="mainFragmentName"
+        name="Fragment Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="MainFragment"
+        help="The name of the fragment class to create" />
+
+    <parameter
+        id="mainFragmentLayout"
+        name="Fragment Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        default="fragment_main"
+        help="The name of the layout to create for the activity" />
+
+    <parameter
+        id="tabFragmentName"
+        name="Fragment Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="TabFragment"
+        help="The name of the fragment class to create" />
+
+    <parameter
+        id="tabFragmentLayout"
+        name="Fragment Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        default="fragment_tab"
+        help="The name of the layout to create for the activity" />
+
+    <parameter
+        id="packageName"
+        name="Package name"
+        type="string"
+        constraints="package"
+        default="com.mycompany.myapp" />
+
+    <execute file="recipe.xml.ftl" />
+
+</template>
