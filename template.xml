@@ -3,7 +3,7 @@
         name="Tab Layout in Fragment Activity"
         description="Creates a new Tab activity within fragment classes">
 
-    <category value="Other"/>
+    <category value="Activity"/>
 
     <parameter
         id="mainActivityClass"
