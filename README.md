@@ -1,6 +1,6 @@
-# TabLayout Activity in FragmentLayout Template
+# Tab Activity in FragmentLayout Template
 
-TabLayout Activity in FragmentLayout Template for android studio
+Tab Activity in FragmentLayout Template for android studio
 
 <img src="https://i.imgur.com/UaVdQwQ.png" width="200">
 
@@ -33,7 +33,7 @@ android {
 ### Installing
 
 - Clone or download this repo
-- Copy folder TabActivityTemplate to 
+- Copy folder `TabActivityInFragmentTemplate` to 
 
 for windows user:
 ```
