@@ -9,10 +9,14 @@ import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.${mainFragmentLayout}.*
 
-class ${mainFragmentName} : Fragment() {
+class ${mainFragmentClass} : Fragment() {
+
+    private lateinit var mViewBinding: ${mainFragmentClass}Binding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.${mainFragmentLayout}, container, false)
+        mViewBinding = ${mainFragmentClass}Binding.inflate(inflater, container, false)
+        mViewBinding.setLifecycleOwner(this@${mainFragmentClass})
+        return mViewBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -24,7 +28,7 @@ class ${mainFragmentName} : Fragment() {
         tabLayout.setupWithViewPager(viewPager, true)
         val adapter = ViewPagerAdapter(childFragmentManager)
         for (i in 0 until numTab){
-            val fragmentTab = ${tabFragmentName}()
+            val fragmentTab = ${tabFragmentClass}()
             fragmentTab.setTabName("Tab")
             adapter.addFragment(fragmentTab, "Tab")
         }
